@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Yu Gothic", "YuGothic", "Meiryo", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
   margin: 0;
@@ -79,7 +83,34 @@ p {
   margin-bottom: 1.4rem;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: #fffbfc;
+  border: 2px solid #f8d7e3;
+  border-radius: 2rem;
+  box-shadow: 0 4px 16px rgba(255, 182, 193, 0.25);
+  color: #c75b7a;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4);
+  border-color: #f0b8cc;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   section {
     transition: none;
   }
