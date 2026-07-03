@@ -212,6 +212,43 @@ body {
   box-shadow: none;
 }
 
+.runaway-section p:last-of-type {
+  margin-bottom: 0;
+}
+
+.runaway-btn {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 200;
+  margin: 0;
+  padding: 0.6rem 1.2rem;
+  background: #1a1a4e;
+  border: 3px solid #f0f0f0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #ffff88;
+  font-family: "DotGothic16", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.runaway-btn:hover {
+  background: #ffff88;
+  color: #1a1a4e;
+}
+
+.runaway-btn.caught {
+  background: #88cc88;
+  color: #0d0d1a;
+  border-color: #f0f0f0;
+  cursor: default;
+}
+
 @media (max-width: 400px) {
   .stat-name {
     width: 5.5rem;
@@ -244,6 +281,10 @@ body {
   }
 
   .rpg-window {
+    transition: none;
+  }
+
+  .runaway-btn {
     transition: none;
   }
 }
