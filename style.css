@@ -5,7 +5,7 @@ html {
 body {
   font-family: "Yu Gothic", "YuGothic", "Meiryo", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 0 0 1rem;
   min-height: 100vh;
   background-color: #e8f7f2;
   background-image:
@@ -104,6 +104,27 @@ p {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4);
   border-color: #f0b8cc;
+}
+
+.site-footer {
+  width: min(100%, 500px);
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  padding: 1.5rem 1rem;
+}
+
+.site-footer p {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #c75b7a;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
