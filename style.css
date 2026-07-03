@@ -3,84 +3,144 @@ html {
 }
 
 body {
-  font-family: "Yu Gothic", "YuGothic", "Meiryo", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-family: "DotGothic16", "Yu Gothic", sans-serif;
   margin: 0;
   padding: 0 0 1rem;
   min-height: 100vh;
-  background-color: #e8f7f2;
-  background-image:
-    radial-gradient(rgba(255, 192, 203, 0.35) 2px, transparent 2px),
-    radial-gradient(circle at 15% 20%, rgba(255, 218, 233, 0.6) 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(186, 225, 255, 0.55) 0%, transparent 45%),
-    linear-gradient(165deg, #d8f3ea 0%, #fde8f0 45%, #e8f0fc 100%);
-  background-size: 28px 28px, 100% 100%, 100% 100%, 100% 100%;
-  background-attachment: fixed;
+  background-color: #0d0d1a;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: #f0f0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
 
-h1, h2, h3 {
+.game-screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.profile-header {
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.profile-label {
+  color: #88ccff;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.2em;
+}
+
+.player-name {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 3px 3px 0 #333;
+  margin: 0.5rem 0;
+}
+
+.player-title {
+  color: #88ccff;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.rpg-window {
+  width: min(100%, 520px);
+  box-sizing: border-box;
+  background: #1a1a4e;
+  border: 4px solid #f0f0f0;
+  outline: 4px solid #1a1a4e;
+  box-shadow: 0 0 0 4px #f0f0f0;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  image-rendering: pixelated;
+  transition: background 0.2s ease;
+}
+
+.rpg-window:hover {
+  background: #2a2a6e;
+}
+
+.rpg-window h2 {
+  color: #ffff88;
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  text-align: left;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.rpg-window p,
+.rpg-window li {
+  color: #f0f0f0;
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+.rpg-window p {
   margin-bottom: 1rem;
 }
 
-h1 {
-  font-size: 2.2rem;
-  letter-spacing: .1em;
+.rpg-window p:last-child {
+  margin-bottom: 0;
 }
 
-h2 {
-  font-size: 1.4rem;
-  color: #c75b7a;
+.rpg-window ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-h3 {
-  font-size: 1.2rem;
-  color: #002566;
-}
-p, ul {
-  max-width: 500px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 2rem;
-}
-
-section {
-  width: min(100%, 500px);
-  box-sizing: border-box;
-  margin-bottom: 2rem;
-  background: #fffbfc;
-  border: 2px solid #f8d7e3;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(255, 182, 193, 0.25);
-  padding: 1.5rem 1.5rem 1rem 1.5rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(255, 182, 193, 0.4);
-  border-color: #f0b8cc;
-}
-
-ul {
-  padding-left: 1.3em;
-}
-
-li {
+.rpg-window li {
   margin-bottom: 0.5em;
-  font-size: 1em;
-  line-height: 1.8;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #222;
-  margin-bottom: 1.4rem;
+.rpg-window li::before {
+  content: "◇ ";
+  color: #ffff88;
+}
+
+.movie-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.movie-list {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.movie-poster {
+  width: 120px;
+  height: auto;
+  border: 3px solid #f0f0f0;
+  border-radius: 0;
+  box-shadow: none;
+  flex-shrink: 0;
+  image-rendering: pixelated;
+}
+
+.game-footer {
+  width: min(100%, 520px);
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 5rem;
+  padding: 1rem;
+}
+
+.game-footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #88ccff;
 }
 
 .back-to-top {
@@ -89,42 +149,39 @@ p {
   right: 1.5rem;
   z-index: 100;
   padding: 0.6rem 1rem;
-  background: #fffbfc;
-  border: 2px solid #f8d7e3;
-  border-radius: 2rem;
-  box-shadow: 0 4px 16px rgba(255, 182, 193, 0.25);
-  color: #c75b7a;
+  background: #1a1a4e;
+  border: 3px solid #f0f0f0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #ffff88;
+  font-family: "DotGothic16", sans-serif;
   font-size: 0.9rem;
   font-weight: bold;
   text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .back-to-top:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4);
-  border-color: #f0b8cc;
+  background: #ffff88;
+  color: #1a1a4e;
+  transform: none;
+  box-shadow: none;
 }
 
-.site-footer {
-  width: min(100%, 500px);
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-  padding: 1.5rem 1rem;
-}
+@media (max-width: 400px) {
+  .movie-row {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.site-footer p {
-  margin-bottom: 0.4rem;
-  font-size: 0.9rem;
-  color: #c75b7a;
-}
+  .movie-poster {
+    width: 60%;
+    max-width: 200px;
+  }
 
-.footer-note {
-  font-size: 0.8rem;
-  color: #999;
-  margin-bottom: 0;
+  .player-name {
+    font-size: 1.6rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -132,11 +189,7 @@ p {
     scroll-behavior: auto;
   }
 
-  section {
+  .rpg-window {
     transition: none;
-  }
-
-  section:hover {
-    transform: none;
   }
 }

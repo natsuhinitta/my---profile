@@ -4,37 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>自己紹介</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 id="top">はじめまして</h1>
-  <p class="name">山田太郎</p>  <section>
-    <h2>自己紹介</h2>
-    <p>山田太郎です。
-      <br>HTML/CSS の研修で自己紹介ページを作っています。</p>
-    <p>聞くのも話すのも好きなので、パズルゲームや映画の話で盛り上がれるとうれしいです。おすすめがあれば教えてください。</p>
-  </section>
-  <section>
-    <h2>好きなこと</h2>
-    <p>のんびり浸れるものと、黙々考えるもの、両方好きです。</p>
-    <ul>
-      <li>寝ること </li>
-      <li>ゲーム </li>
-      <li>漫画、アニメ</li>
-      <li>映画</li>
-    </ul>
-  </section>
-  <section>
-    <h2>よく見る映画</h2>
-    <ul>
-      <li>千と千尋の神隠し</li>
-      <li>君の名は。</li>
-    </ul>
-  </section>
-  <footer class="site-footer">
-    <p>山田太郎の自己紹介ページ</p>
-    <p class="footer-note">HTML/CSS 研修用</p>
-  </footer>
-  <a href="#top" class="back-to-top" aria-label="ページトップへ戻る">↑ トップ</a>
+  <div class="game-screen">
+    <header class="profile-header" id="top">
+      <p class="profile-label">--- STATUS ---</p>
+      <h1 class="player-name">山田太郎</h1>
+      <p class="player-title">Lv.1 研修冒険者</p>
+    </header>
+
+    <section class="rpg-window">
+      <h2>■ PLAYER PROFILE</p>
+        <p>Name</p>
+        <br>山田太郎</br>
+        <p>Age</p>
+        <br>17</br>
+        <p>Occupation</p>
+        <br>学生</br>
+        <p>Location</p>
+        <br>広島県</br>
+    </section>
+
+    <section class="rpg-window">
+      <h2>■ 好きなこと</h2>
+      <p>のんびり浸れるものと、黙々考えるもの、両方好きです。</p>
+      <ul>
+        <li>寝ること</li>
+        <li>ゲーム</li>
+        <li>漫画、アニメ</li>
+        <li>映画</li>
+      </ul>
+    </section>
+
+    <section class="rpg-window">
+      <h2>■ よく見る映画</h2>
+      <div class="movie-row">
+        <ul class="movie-list">
+          <li>千と千尋の神隠し</li>
+          <li>君の名は。</li>
+        </ul>
+        <img
+          class="movie-poster"
+          src="images/5a9419b88a877ea25c7d20361d080bdb.jpg"
+          alt="千と千尋の神隠しのイメージ"
+          width="160"
+          height="220"
+        >
+      </div>
+    </section>
+
+    <footer class="game-footer">
+      <p>© 山田太郎 · HTML/CSS 研修用</p>
+    </footer>
+  </div>
+
+  <a href="#top" class="back-to-top" aria-label="ページトップへ戻る">▲ TOP</a>
 </body>
 </html>
