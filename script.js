@@ -100,3 +100,40 @@
     }
   });
 })();
+
+(function () {
+  const trigger = document.getElementById("schoolMapBtn");
+  const modal = document.getElementById("mapModal");
+  if (!trigger || !modal) return;
+
+  const closeButtons = modal.querySelectorAll("[data-close-map]");
+  const closeBtn = modal.querySelector(".map-modal-close");
+  let lastFocused = null;
+
+  function openModal() {
+    lastFocused = document.activeElement;
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.classList.remove("modal-open");
+    if (lastFocused && typeof lastFocused.focus === "function") {
+      lastFocused.focus();
+    }
+  }
+
+  trigger.addEventListener("click", openModal);
+
+  closeButtons.forEach(function (el) {
+    el.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.hidden) {
+      closeModal();
+    }
+  });
+})();

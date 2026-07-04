@@ -22,6 +22,8 @@
         <p>Name: 山田太郎</p>
         <p>Age: 17</p>
         <p>Occupation: 学生</p>
+        <p>School: <button type="button" class="map-trigger" id="schoolMapBtn">広島大学附属高等学校</button></p>
+        <p>Address: 広島県広島市南区翠一丁目1番1号</p>
         <p>Location: 広島県</p>
     </section>
 
@@ -89,6 +91,23 @@
 
   <a href="#top" class="back-to-top" aria-label="ページトップへ戻る">▲ TOP</a>
   <button type="button" class="runaway-btn" id="runawayBtn">▶ GET!</button>
+
+  <div class="map-modal" id="mapModal" hidden role="dialog" aria-modal="true" aria-labelledby="mapModalTitle">
+    <div class="map-modal-overlay" data-close-map></div>
+    <div class="map-modal-panel">
+      <h3 id="mapModalTitle">広島大学附属高等学校</h3>
+      <iframe
+        class="map-iframe"
+        title="広島大学附属高等学校の地図"
+        src="https://maps.google.com/maps?q=広島大学附属高等学校&hl=ja&z=15&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+      <button type="button" class="map-modal-close" data-close-map aria-label="地図を閉じる">× CLOSE</button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

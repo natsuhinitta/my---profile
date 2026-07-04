@@ -249,6 +249,111 @@ body {
   cursor: default;
 }
 
+.map-trigger {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #ffff88;
+  color: #ffff88;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.map-trigger:hover {
+  background: #ffff88;
+  color: #1a1a4e;
+}
+
+.map-trigger:focus-visible {
+  outline: 2px solid #88ccff;
+  outline-offset: 2px;
+}
+
+.map-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.map-modal[hidden] {
+  display: none;
+}
+
+.map-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 13, 26, 0.85);
+}
+
+.map-modal-panel {
+  position: relative;
+  width: min(100%, 520px);
+  box-sizing: border-box;
+  background: #1a1a4e;
+  border: 4px solid #f0f0f0;
+  outline: 4px solid #1a1a4e;
+  box-shadow: 0 0 0 4px #f0f0f0;
+  padding: 1.2rem 1.5rem;
+  image-rendering: pixelated;
+}
+
+.map-modal-panel h3 {
+  color: #ffff88;
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.map-iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 3px solid #f0f0f0;
+  box-sizing: border-box;
+}
+
+.map-modal-close {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background: #1a1a4e;
+  border: 3px solid #f0f0f0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #ffff88;
+  font-family: "DotGothic16", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.map-modal-close:hover {
+  background: #ffff88;
+  color: #1a1a4e;
+}
+
+.map-modal-close:focus-visible {
+  outline: 2px solid #88ccff;
+  outline-offset: 2px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 @media (max-width: 400px) {
   .stat-name {
     width: 5.5rem;
@@ -273,6 +378,10 @@ body {
   .player-name {
     font-size: 1.6rem;
   }
+
+  .map-iframe {
+    height: 220px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -285,6 +394,11 @@ body {
   }
 
   .runaway-btn {
+    transition: none;
+  }
+
+  .map-trigger,
+  .map-modal-close {
     transition: none;
   }
 }
